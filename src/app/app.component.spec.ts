@@ -19,7 +19,7 @@ describe('AppComponent', () => {
   it(`should have as title 'stringapplication'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('stringapplication');
+    expect(app['title']).toEqual('stringapplication');
   });
 
   it('should render title', () => {
@@ -28,4 +28,6 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('stringapplication app is running!');
   });
+
 });
+
